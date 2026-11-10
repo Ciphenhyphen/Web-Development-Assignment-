@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+
+.courses{ color:blue }
+
+.current{ font-family:"Brush Script MT"}
+
+</style>
+
+<script>
+window.addEventListener("load", function() {
+  var elements = document.getElementsByClassName("rainbowText");
+  for (let i = 0; i < elements.length; i++) {
+    generateRainbowText(elements[i]);
+  }
+});
+
+function generateRainbowText(element) {
+  var text = element.innerText;
+  element.innerHTML = "";
+  for (let i = 0; i < text.length; i++) {
+    let charElem = document.createElement("span");
+    charElem.style.color = "hsl(" + (360 * i / text.length) + ",80%,50%)";
+    charElem.innerHTML = text[i];
+    element.appendChild(charElem);
+  }
+}
+</script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me, who I am, and so on...</title>
+
+</head>
+<body>
+    <h1>A bit on me...</h1>
+    <p> I'm Leonardo Pena, but you can call me Leo. I've been a 
+        student here for a while and transferred from San Jac, 
+        where I completed most of my pre-requisites. I'm taking
+        this course to better myself in Web Programming. 
+        <p>
+        <img src="Screenshot (362).png" width="75" height="80" align="right">
+        I become acquainted with Web Programming (Javascript,) through a toy project I made this summer,
+        where a character said a certain word over the course of 10 minutes, 
+        another video where he says it for 3 hours. My front end was Javascript 		using chart.js, my back end, or in this case, native application was 
+        Python. It turned out alright, but It got me wanting to do more in my field of study.
+        </p>
+        
+        <p>
+        While continuing web programming is a nice way of learning what else I can from this field,
+        I also want to try mobile development, and even find out what's the deal with cloud development. For programming languages, I've used some Javascript, HTML, CSS, Python, C++, and mySQL. I've also tinkered with Kotlin and Java by messing with android studio, but it's not something I've
+        used recently. While computer science is a major where programming is put in you and everyone feels they need to recreate apple's or amazon's systems through a project, sometimes just making something you like can help, even better is when you have the soft skills that make you feel human, like in my case where explaining
+ my silly project got some eyes on me.
+        </p>
+        
+        <p>
+        A few more tidbits on me. I enjoy experimental and hauntology based music (<a href="https://caretakerfp.wiki.gg/wiki/Nowhere_at_the_Millennium_of_Space:_Redux">Nowhere at the Millennium of Space: Redux</a>, <a href="https://caretakerfp.wiki.gg/wiki/Forevermore,_and_Nevermore">Forevermore, and Nevermore</a>, <a href=https://en.wikipedia.org/wiki/Everywhere_at_the_End_of_Time> Everywhere at the End of Time</a>). I exercise in my own time and read, and have recently got into gardening where I have begun to grow a variety of flowers (Zinnias, Sunflower varieties, Cosmos, and so on).<img src="tiny_garden.jpg" width="150" height="125" align="right">
+        </p>
+
+        <h1 class = "current">
+            So far...
+        </h1>
+
+        <p>My current courses are:</p>
+        <ul class = "courses">
+            <li>CS 4318</li>
+            <li>CS 4300</li>
+            <li>CS 3306</li>
+        </ul>
+        <p>They've been ok, been busy with this but unable to make time for anything else, just when I think I have time for something, boom! Something pops up. Sad. 
+            Here's a table of what I've been able to read so far, to keep track from forgetting.
+        </p>
+
+        <table>
+            <tr>
+                <th>Author</th>
+                <th>Book</th>
+                <th>Genre</th>
+            </tr>
+            <tr>
+                <td>Varlam Shalamov</td>
+                <td>Kolyma Stories</td>
+                <td>Short Stories</td>
+            </tr>
+            <tr>
+                <td>Cormac Mcarthy</td>
+                <td>Suttree</td>
+                <td>AutoFiction</td>
+            </tr>
+            <tr>
+                <td>Flannery O Connor</td>
+                <td>Collected Stories</td>
+                <td>Southern Gothic</td>
+            </tr>
+        </table>
+
+        <p class="rainbowText">I need a job.</p>
+</body>
+</html>
